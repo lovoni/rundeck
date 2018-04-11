@@ -9,7 +9,6 @@ RUN curl -O https://bootstrap.pypa.io/get-pip.py  \
     && echo "export PATH=~/.local/bin:$PATH" >> ~/.bash_profile \
     && . ~/.bash_profile
 
-RUN ~/.local/bin/pip install awscli --upgrade --user \
-    && ~/.local/bin/aws configure
+RUN ~/.local/bin/pip install awscli --user 
 
 VOLUME ~/.aws
