@@ -6,7 +6,7 @@ RUN apt-get install python
 
 RUN curl -O https://bootstrap.pypa.io/get-pip.py  \
     && python get-pip.py --user \
-    && echo "export PATH=~/.local/bin:$PATH" >> /etc/profile 
+    && echo "export PATH=~/.local/bin:$PATH" >> ~/.profile 
 
 RUN ~/.local/bin/pip install awscli --user 
 
