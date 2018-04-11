@@ -7,7 +7,7 @@ RUN apt-get install python
 RUN curl -O https://bootstrap.pypa.io/get-pip.py  \
     && python get-pip.py --user \
     && echo "export PATH=~/.local/bin:$PATH" >> ~/.bash_profile \
-    && source ~/.bash_profile \
+    && . ~/.bash_profile \
     && pip install awscli --upgrade --user \
     && aws configure
 
