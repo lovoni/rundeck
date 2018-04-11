@@ -5,8 +5,8 @@ MAINTAINER lbognini@gmail.com
 RUN apt-get install python
 
 RUN curl -O https://bootstrap.pypa.io/get-pip.py  \
-    && python get-pip.py \
+    && python get-pip.py --user 
 
-RUN pip install awscli 
+RUN ~/.local/bin/pip install awscli
 
 VOLUME ~/.aws
